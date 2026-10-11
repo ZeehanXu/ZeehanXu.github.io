@@ -667,6 +667,72 @@ body.band .band-hero h1 { letter-spacing: 0.01em; }
 .lb-next { right: 16px; top: 50%; transform: translateY(-50%); }
 .lightbox.single .lb-nav { display: none; }
 
+/* Soulo contact */
+
+.contact-cta {
+  padding: 48px 0 44px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.contact-cta h2 {
+  margin-bottom: 6px;
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+  font-weight: 600;
+}
+.contact-cta p { margin-bottom: 20px; color: var(--muted); }
+.contact-buttons { justify-content: center; }
+
+.contact {
+  width: min(100% - 32px, 480px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+.contact::backdrop { background: rgba(8, 9, 12, 0.7); backdrop-filter: blur(3px); }
+.contact-form { display: grid; gap: 14px; padding: 22px 24px 24px; }
+.contact-head { display: flex; align-items: center; justify-content: space-between; }
+.contact-head h2 { margin: 0; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; }
+.contact-close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.contact-close:hover { background: var(--accent-soft); color: var(--ink); }
+.contact label { display: grid; gap: 6px; }
+.contact label span { font-size: 0.82rem; font-weight: 700; color: var(--muted); }
+.contact label em { font-style: normal; font-weight: 400; color: var(--faint); }
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.95rem;
+}
+.contact textarea { resize: vertical; min-height: 110px; }
+.contact input:focus,
+.contact textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
+.contact .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.contact-status { min-height: 1.2em; margin: 0; font-size: 0.9rem; color: var(--muted); }
+.contact-status.ok { color: var(--accent); }
+.contact-status.error { color: #e8a39a; }
+.contact-actions { display: flex; justify-content: flex-end; }
+.contact-actions .btn:disabled { opacity: 0.6; cursor: progress; }
+
 /* Leadership */
 
 .features { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }

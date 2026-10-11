@@ -3,210 +3,281 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zeehan Xu | Portfolio</title>
-    <!-- Google Font -->
+    <meta
+      name="description"
+      content="Zihan (Zee) Xu is a Software Development Engineer on the Amazon Aurora DSQL storage team, building high-performance storage engines in Rust."
+    />
+    <title>Zihan Xu | Software Development Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="logo">Zihan 'Zeehan' Xu</div>
-      <nav>
-        <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#leadership">LEADERSHIP</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-          <li><a href="files/resume.pdf" target="_blank">CV</a></li>
-          <!-- Opens resume.pdf in a new tab -->
-        </ul>
-      </nav>
+    <header class="topbar">
+      <div class="container">
+        <a class="wordmark" href="#top">Zihan Xu</a>
+        <nav class="topnav" aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
+          <a href="#soulo">Soulo</a>
+          <a href="#leadership">Leadership</a>
+          <a class="nav-cv" href="files/resume.pdf" target="_blank" rel="noreferrer">CV</a>
+        </nav>
+      </div>
     </header>
-    <section id="home" class="hero">
-      <div class="content-wrapper">
-        <!-- <div class="left-section">
-          
-          <img src="assets/bot.jpg" alt="Wangobot" class="wangobot-image" />
-          <p class="wangobot-subtitle">WOBOT</p>
 
-
-          <a href="http://18.224.65.94:8501" class="btn">......Click Here</a>
-          <p class="wangobot-description">
-            I've uploaded a part of myself to the cloud
+    <main class="container" id="top">
+      <section class="profile" aria-label="Introduction">
+        <img class="avatar" src="assets/profile/avatar.jpg" alt="Portrait of Zihan Xu" />
+        <div>
+          <p class="eyebrow">Software Development Engineer</p>
+          <h1>Zihan Xu <span class="aka">“Zee”</span></h1>
+          <p class="profile-title">
+            Amazon Web Services · Aurora DSQL Storage
           </p>
-        </div> -->
-        <div class="main-photo">
-          <img src="assets/photo.jpg" alt="Photo of Zeehan working" />
+          <p class="profile-meta">Storage engines · Rust · Performance engineering · Cloud operations</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="files/resume.pdf" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              Download CV
+            </a>
+            <a class="btn btn-ghost" href="mailto:jawco222@pku.edu">Get in touch</a>
+            <nav class="social" aria-label="Profiles">
+              <a href="mailto:jawco222@pku.edu" aria-label="Email Zihan Xu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/zihan-xu-pku/" target="_blank" rel="noreferrer" aria-label="Zihan Xu on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              </a>
+              <a href="https://github.com/ZeehanXu" target="_blank" rel="noreferrer" aria-label="Zihan Xu on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
+              </a>
+            </nav>
+          </div>
         </div>
-        <div class="right-section">
-          <h1>About Me</h1>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <h2 class="section-label" id="about-heading"><span class="num">01</span>About</h2>
+        <div class="section-body prose">
+          <p class="lede">
+            I build and benchmark high-performance storage systems at Amazon Web
+            Services, where I work on the storage engine behind Aurora DSQL.
+          </p>
           <p>
-            Hi! I’m Zihan Xu, a software developer and a Master’s student in
-            Computer Science at Northeastern University. With a diverse
-            background in mobile and web development, my technical expertise
-            spans from backend development to web and iOS applications. While
-            maintaining a 4.0 GPA, I’m also a music enthusiast, skilled in
-            guitar, bass, and saxophone, and I’m passionate about self-learning
-            anything related to hardware and software engineering.
+            On the Aurora DSQL Storage team, I develop storage-engine components in
+            Rust, design benchmarks that measure and push their performance, and
+            take part in the CI/CD pipelines and cloud operations that keep the
+            service running reliably in production.
           </p>
           <p>
-            Before stepping into the tech world, I earned bachelor’s and
-            master’s degrees in Communication and Media Science from Peking
-            University. My goal is to blend my expertise in communication and
-            media technology with my computer science knowledge, enabling me to
-            collaborate effectively in teams and deliver user-centered products.
-          </p>
-          <p>
-            Check out my resume to learn more about my qualifications and
-            experiences, and feel free to reach out if you’d like to collaborate
-            on an exciting new project. (P.S. I’m a fact addict—let’s trade
-            trivia!)
+            I hold an M.S. in Computer Science from Northeastern University, and
+            before that I studied Communication and Media Science at Peking
+            University, a background that shapes how I work with teams and
+            communicate technical ideas. Outside of work I play guitar, bass,
+            and saxophone, and I am always glad to talk systems, music, or trivia.
           </p>
         </div>
-      </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <h1>Projects</h1>
-      <div class="projects-container">
-        <!-- Project Cards -->
+      </section>
 
-        <div class="project-card">
-          <a href="/projects/wobot.html">
-            <img
-              src="assets/project_pics/Wobot/wobot_main.png"
-              alt="Wobot Chatbot"
-            />
-            <p>Wobot - A LLM Based Self-Intro Chatting Agent</p>
+      <section class="section" id="experience" aria-labelledby="experience-heading">
+        <h2 class="section-label" id="experience-heading"><span class="num">02</span>Experience</h2>
+        <div class="section-body">
+          <ul class="entries">
+            <li class="entry">
+              <div>
+                <div class="entry-title">Software Development Engineer</div>
+                <div class="entry-org">Amazon Web Services · Aurora DSQL Storage</div>
+              </div>
+              <div class="entry-date">2026 – Present</div>
+              <ul>
+                <li>Develop components of a high-performance storage engine in Rust for Amazon Aurora DSQL, a serverless distributed SQL database.</li>
+                <li>Design and run benchmarks to measure, profile, and improve storage-engine performance.</li>
+                <li>Contribute to CI/CD pipelines and cloud operations that support the service in production.</li>
+              </ul>
+            </li>
+            <li class="entry">
+              <div>
+                <div class="entry-title">Software Development Engineer Intern</div>
+                <div class="entry-org">Amazon Web Services · Aurora DSQL Storage</div>
+              </div>
+              <div class="entry-date">Jun – Sep 2025</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="publications" aria-labelledby="publications-heading">
+        <h2 class="section-label" id="publications-heading"><span class="num">03</span>Publications</h2>
+        <div class="section-body">
+          <ol class="pubs">
+            <li class="pub">
+              <span class="pub-title">Affective and Functional Needs in AI Use: User Patterns and Their Relation to Real-Life Support and Well-Being</span>
+              <p class="pub-authors">Jessy Wang-Sun, Estelle Yiyuan Sun, Hualin Zhang, &amp; <b>Zihan Xu</b></p>
+              <span class="pub-venue"><em>ACII 2026</em></span>
+            </li>
+            <li class="pub">
+              <span class="pub-title">How Multimodal Self-Disclosure Shapes Emotional Engagement and Cognitive Load: An Exploratory Physiological Study</span>
+              <p class="pub-authors">Jessy Wang-Sun, Estelle Yiyuan Sun, &amp; <b>Zihan Xu</b></p>
+              <span class="pub-venue"><em>MHCI</em> · Paper No. 135</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-heading">
+        <h2 class="section-label" id="education-heading"><span class="num">04</span>Education</h2>
+        <div class="section-body">
+          <ul class="entries compact">
+            <li class="entry">
+              <div>
+                <div class="entry-title">M.S., Computer Science</div>
+                <div class="entry-org">Northeastern University, Boston</div>
+              </div>
+              <div class="entry-date">2023 – 2026</div>
+            </li>
+            <li class="entry">
+              <div>
+                <div class="entry-title">M.A., Media Science · B.A., Communication and Media Studies</div>
+                <div class="entry-org">Peking University, Beijing</div>
+              </div>
+              <div class="entry-date">2017 – 2023</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <h2 class="section-label" id="skills-heading"><span class="num">05</span>Skills</h2>
+        <div class="section-body">
+          <dl class="skills">
+            <div>
+              <dt>Languages</dt>
+              <dd><b>Rust</b> (primary), Python, Java, C++, SQL / PostgreSQL</dd>
+            </div>
+            <div>
+              <dt>Storage</dt>
+              <dd>LSM trees and compaction, B-trees and page management, write-ahead logging, durability and crash recovery</dd>
+            </div>
+            <div>
+              <dt>Distributed Systems</dt>
+              <dd>Replication, partitioning, and consistency in distributed databases; gRPC and Protocol Buffers</dd>
+            </div>
+            <div>
+              <dt>Performance</dt>
+              <dd>Benchmark design, profiling and flame graphs, async Rust and concurrency, low-level optimization of memory and I/O</dd>
+            </div>
+            <div>
+              <dt>Cloud &amp; Ops</dt>
+              <dd>AWS, CI/CD pipelines, infrastructure as code, on-call and operational excellence</dd>
+            </div>
+            <div>
+              <dt>Also</dt>
+              <dd>Django, Vue.js, Swift / UIKit, Firebase, LangChain, PyTorch</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section" id="honors" aria-labelledby="honors-heading">
+        <h2 class="section-label" id="honors-heading"><span class="num">06</span>Honors</h2>
+        <div class="section-body">
+          <ul class="entries compact">
+            <li class="entry">
+              <div>
+                <div class="entry-title">Scientific Innovation Scholarship</div>
+                <div class="entry-org">Peking University · $2,500 per year</div>
+              </div>
+              <div class="entry-date">2021</div>
+            </li>
+            <li class="entry">
+              <div>
+                <div class="entry-title">May 4th Scholarship</div>
+                <div class="entry-org">Peking University · $1,000</div>
+              </div>
+              <div class="entry-date">2018</div>
+            </li>
+            <li class="entry">
+              <div>
+                <div class="entry-title">Award for Contribution in Student Organizations</div>
+                <div class="entry-org">Peking University · Guitar Association</div>
+              </div>
+              <div class="entry-date">2018</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="soulo" aria-labelledby="soulo-heading">
+        <h2 class="section-label" id="soulo-heading"><span class="num">07</span>Music · Soulo</h2>
+        <div class="section-body">
+          <a class="band-card" href="soulo.html">
+            <img src="assets/soulo/live/jungle-band.jpg" alt="Soulo on stage at The Jungle: keys, bass, and guitar under blue stage lights" loading="lazy" />
+            <div class="band-card-body">
+              <p class="project-tag">Band · Guitar, vocals &amp; production</p>
+              <h3>Soulo</h3>
+              <p>
+                Jazzy R&amp;B meets math rock and shoegaze. I play guitar, sing,
+                co-write, and produce.
+              </p>
+              <span class="band-more">Visit the band page →</span>
+            </div>
           </a>
+          <p class="band-links">
+            <a href="https://open.spotify.com/artist/2Nm2gru3ACGOw8cM4AdSRD" target="_blank" rel="noreferrer">Spotify</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://soundcloud.com/soulo-project" target="_blank" rel="noreferrer">SoundCloud</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.instagram.com/soulo_band" target="_blank" rel="noreferrer">Instagram</a>
+          </p>
         </div>
+      </section>
 
-        <div class="project-card">
-          <a href="files/huskylife_slides.pdf">
-            <img
-              src="assets/project_pics/huskylife/huskylife_main.jpg"
-              alt="Husky Life Icon"
-            />
-            <p>Husky Life - iOS Student Life Manager</p>
-          </a>
+      <section class="section" id="leadership" aria-labelledby="leadership-heading">
+        <h2 class="section-label" id="leadership-heading"><span class="num">08</span>Leadership &amp; Community</h2>
+        <div class="section-body">
+          <ul class="features">
+            <li class="feature">
+              <img src="assets/leadership/pku-guitar-association.jpg" alt="Zihan with fellow band members" loading="lazy" />
+              <div>
+                <h3>President, Guitar Association of Peking University</h3>
+                <p>Promoted music education on campus, built a network with three major music organizations, organized regular performances, and performed with several bands.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <img src="assets/leadership/music-seminar.jpg" alt="Zihan presenting a music seminar" loading="lazy" />
+              <div>
+                <h3>Music and Music-Technology Educator</h3>
+                <p>Teaches music and gives seminars on music theory and technology, advocating for software and AI that help people create art rather than replace them in the creative process.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <img src="assets/leadership/performing-guitar.jpg" alt="Zihan performing on stage" loading="lazy" />
+              <div>
+                <h3>Multi-Instrumentalist</h3>
+                <p>Plays guitar, bass, and saxophone across rock, blues, soul, funk, R&amp;B, and jazz.</p>
+              </div>
+            </li>
+            <li class="feature">
+              <img src="assets/leadership/volleyball.jpg" alt="Zihan playing volleyball" loading="lazy" />
+              <div>
+                <h3>Volleyball Player and Coach</h3>
+                <p>Earned multiple medals in the Peking University Cup as both a player and a coach.</p>
+              </div>
+            </li>
+          </ul>
         </div>
+      </section>
 
-        <div class="project-card">
-          <a href="projects/endeavoir.html">
-            <img
-              src="assets/project_pics/endeavoir/endeavoir_cover.jpg"
-              alt="Endeavoir Project Photo"
-            />
-            <p>Endeavoir Project - A Companion of Your Musical Endeavor</p>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section id="leadership" class="activities-section">
-      <h1>Leadership Activities</h1>
-      <div class="activities-container">
-        <!-- Activity 1 -->
-        <div class="activity-card">
-          <div class="activity-image">
-            <img
-              src="assets/leadership/music/asobi_group.JPG"
-              alt="Photo with Band Members"
-            />
-          </div>
-          <div class="activity-text">
-            <h2>President of Guitar Association of Peking University</h2>
-            <p>
-              I was an active member and president of Guitar Association of
-              Peking University. During my term, I promoted music education on
-              campus, established connection with more than 3 major
-              music-related student organiztions in PKU in order to build a
-              network of musicians, and organized performances regularly, as
-              well as performing on stage in different bands myself.
-            </p>
-          </div>
-        </div>
-        <!-- Activity 2 -->
-        <div class="activity-card">
-          <div class="activity-image">
-            <img
-              src="assets/leadership/music/performing.jpg"
-              alt="Contemporary Artist"
-            />
-          </div>
-
-          <div class="activity-text">
-            <h2>Multi-inrtumental and Multi-genre Musician</h2>
-            <p>
-              I love and play a wide spectrum of music, from the raw energy of
-              rock and blues to the smooth sophistication of soul, funk, R&B,
-              and jazz..
-            </p>
-          </div>
-        </div>
-        <!-- Activity 3 -->
-        <div class="activity-card">
-          <div class="activity-image">
-            <img
-              src="assets/leadership/music/seminar.JPG"
-              alt="Contemporary Artist"
-            />
-          </div>
-
-          <div class="activity-text">
-            <h2>Contributor and Advocate of Music and Music-Tech Community</h2>
-            <p>
-              I enjoy teaching people music and giving speeches and seminars
-              about music theory and music technology. To combine my love and
-              knowledge of music and technology has been my long-time passion.
-              My opinion on the relationship between art and tech is that all
-              hardware and software including AI should be developed to help
-              people create art but not to replace people in the creative
-              process.
-            </p>
-          </div>
-        </div>
-        <!-- Activity 4 -->
-        <div class="activity-card">
-          <div class="activity-image">
-            <img
-              src="assets/leadership/volleyball.jpg"
-              alt="Mental Health Workshop"
-            />
-          </div>
-          <div class="activity-text">
-            <h2>Volleyball Hobbist</h2>
-            <p>
-              During my college years, I spent most of my leisure time on
-              volleyball. I got multiple medals in Peking University Cup as both
-              a player and a coach. I also met a lot of my dearest friends
-              through volleyball.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="contact-section">
-      <h1>Contact</h1>
-      <div class="contact-container">
-        <div class="contact-item">
-          <img src="assets/icons/email.png" alt="Email Icon" />
-          <a href="mailto:jawco222@pku.edu">jawco222@pku.edu</a>
-        </div>
-        <div class="contact-item">
-          <img src="assets/icons/linkedin.png" alt="LinkedIn Icon" />
-          <a href="https://www.linkedin.com/in/zihan-xu-pku/" target="_blank"
-            >LinkedIn Profile</a
-          >
-        </div>
-        <div class="contact-item">
-          <img src="assets/icons/github.png" alt="GitHub Icon" />
-          <a href="https://github.com/ZeehanXu" target="_blank">GitHub Page</a>
-        </div>
-      </div>
-    </section>
+      <footer class="site-footer" id="contact">
+        <p class="cta">Let’s connect: <a href="mailto:jawco222@pku.edu">jawco222@pku.edu</a></p>
+        <p>© 2026 Zihan Xu</p>
+      </footer>
+    </main>
   </body>
 </html>

@@ -732,6 +732,170 @@ body.band .band-hero h1 { letter-spacing: 0.01em; }
 .contact-status.error { color: #e8a39a; }
 .contact-actions { display: flex; justify-content: flex-end; }
 .contact-actions .btn:disabled { opacity: 0.6; cursor: progress; }
+.contact-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.contact select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.95rem;
+}
+.contact select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
+
+/* Soulo Collective: event booking page, follows the booking profile PDF */
+
+body.collective {
+  --bg: #0d0c12;
+  --surface: #17151f;
+  --line: #27242f;
+  --accent: #b6a0d8;
+  --accent-soft: rgba(182, 160, 216, 0.12);
+}
+body.collective .btn-primary { color: #0d0c12; }
+
+.sc-hero { position: relative; background: #000; }
+.sc-hero img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-height: 82vh;
+  object-fit: cover;
+  object-position: 50% 70%;
+}
+.sc-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(13, 12, 18, 0.55), transparent 32%),
+    linear-gradient(to top, var(--bg), transparent 30%);
+  pointer-events: none;
+}
+.sc-hero-text {
+  position: absolute;
+  z-index: 1;
+  top: clamp(24px, 5vw, 48px);
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+.sc-kicker,
+.sc-sub {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.sc-kicker { color: var(--accent); margin-bottom: 4px; }
+.sc-hero h1 {
+  margin: 0 0 4px;
+  font-size: clamp(3.4rem, 10vw, 6.4rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.sc-sub { color: rgba(255, 255, 255, 0.85); }
+
+.sc-intro { padding: 12px 0 52px; }
+.sc-intro h2 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.sc-tagline {
+  margin-bottom: 28px;
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+  line-height: 1.45;
+  color: var(--muted);
+}
+.sc-pillars {
+  margin: -12px 0 28px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.sc-pillars span { margin: 0 4px; color: var(--faint); }
+
+body.collective .section-label { color: var(--accent); }
+
+.sc-highlights,
+.sc-offer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.sc-highlights li,
+.sc-offer li {
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.sc-highlights h3,
+.sc-offer h3 {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.sc-highlights p,
+.sc-offer p { margin: 0; color: var(--muted); }
+.sc-highlights li { border-left: 3px solid var(--accent); }
+.sc-highlights a { font-weight: 700; white-space: nowrap; }
+.sc-offer li:last-child { grid-column: 1 / -1; }
+
+.sc-venues {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sc-venues li {
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+.sc-venues span { color: var(--faint); font-weight: 400; }
+
+.sc-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.sc-gallery figure { margin: 0; }
+.sc-gallery .zoom img { aspect-ratio: 1; object-fit: cover; }
+.sc-gallery figcaption { margin-top: 6px; color: var(--faint); font-size: 0.8rem; }
+
+.sc-book h2 {
+  font-family: var(--sans);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.sc-book .sc-occasions {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.sc-occasions span { color: var(--accent); margin: 0 4px; }
 
 /* Leadership */
 
@@ -813,6 +977,13 @@ body.band .band-hero h1 { letter-spacing: 0.01em; }
   .lightbox figure { padding: 64px 12px 72px; }
   .lb-prev, .lb-next { top: auto; bottom: 16px; transform: none; }
   .art-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .sc-hero-text { top: 16px; }
+  .sc-hero h1 { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+  .sc-kicker, .sc-sub { font-size: 0.66rem; }
+  .sc-tagline br { display: none; }
+  .sc-highlights, .sc-offer { grid-template-columns: 1fr; }
+  .sc-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .contact-row { grid-template-columns: 1fr; }
   .band-card { grid-template-columns: 1fr; }
   .band-card img { width: 100%; min-height: 0; aspect-ratio: 16 / 9; }
   .feature { grid-template-columns: 96px minmax(0, 1fr); gap: 16px; }
